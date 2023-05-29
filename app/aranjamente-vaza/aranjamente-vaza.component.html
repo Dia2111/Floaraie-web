@@ -1,0 +1,15 @@
+<section>
+  <div item *ngFor="let product3 of products3FromDB">
+    <p class="text-color" style="padding-left: 570px; font-size: 20px">{{product3.Nume}} - {{product3.Pret}} RON</p>
+    <img src="{{product3.Imagine}}" alt="img7" height="500" width="500" class="img2">
+    <button mat-raised-button class="img-button1" (click)="addToCart3(product3)">
+      <span class="text-color">Adaugati in cos</span>
+    </button>
+    <button mat-raised-button class="img-button2" (click)="showProductDetails(product3)" routerLink="/cart">
+      <span class="text-color">Detalii</span>
+    </button>
+    <div *ngIf="selectedProductDetails === product3.Detalii">
+      <p class="text-color" style="padding-left: 80px; padding-right: 80px; padding-top: 20px; padding-bottom: 20px; font-size: 20px; text-align: center;">{{ selectedProductDetails }}</p>
+    </div>
+  </div>
+</section>

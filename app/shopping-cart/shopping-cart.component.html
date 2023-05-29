@@ -1,0 +1,38 @@
+<section class="shopping-cart">
+  <div class="cart-summary">
+    <h6 class="cart-title">Coș de cumpărături:</h6>
+    <p class="cart-info">{{ cart.items.length }} Produse în coș</p>
+  </div>
+  <div class="cart-items">
+    <div class="cart-item cart-header">
+      <div class="item-column">Imagine</div>
+      <div class="item-column">Nume</div>
+      <div class="item-column">Preț</div>
+      <div class="item-column">Cantitate</div>
+      <div class="item-column"> </div>
+    </div>
+    <div class="cart-item" *ngFor="let item of cart.items">
+      <div class="item-column">
+        <img src="{{ item.Imagine }}" alt="img" class="item-image">
+      </div>
+      <div class="item-column">{{ item.Nume }}</div>
+      <div class="item-column">{{ item.Pret | currency:' RON ' }}</div>
+      <div class="item-column">
+        <div class="item-quantity">
+          <button class="quantity-button" (click)="decreaseQuantity(item)">-</button>
+          <button class="quantity-button" (click)="increaseQuantity(item)">+</button>
+          <p class="item-text">{{ item.Cantitate }}</p>
+        </div>
+      </div>
+      <div class="item-column">
+        <button (click)="removeFromCart(item)" class="remove-button">
+          <span class="button-text">Șterge</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <p class="cart-total">Total: {{ cart.total | currency:'RON' }}</p>
+  <button routerLink="/checkout" class="checkout-button" (click)="onSaveCart">
+    <span class="button-text">Finalizează comanda</span>
+  </button>
+</section>

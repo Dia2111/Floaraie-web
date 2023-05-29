@@ -1,0 +1,10 @@
+<section>
+    <!-- <ng-container *ngFor="let product of products3FromDB"> -->
+        <ng-container>
+      <div item *ngIf="product3.id === desiredProductId">
+        <p class="text-color" style="padding-left: 570px; font-size: 20px">{{ product3.Nume }} - {{ product3.Pret }} RON</p>
+        <img src="{{ product3.Imagine }}" alt="img1" height="500" width="500" class="img2">
+        <p class="text-color" style="padding-left: 570px; font-size: 20px">{{ product3.Detalii }}</p>
+      </div>
+    </ng-container>
+  </section>

@@ -1,0 +1,31 @@
+footer {
+    /* background-image: url('D:\Proiect_WEB\my_project\src\assets\images\footer.png');
+    background-size: cover; 
+    background-position: center; */
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  }
+  .footer-container {
+    background-color: white;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999; 
+  }
+  
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  
+  .contact-info {
+    color: rgb(188, 6, 115);
+    font-family: 'Merriweather', serif;
+    padding-top:30px;
+    padding-bottom: 10px;
+  }
+  

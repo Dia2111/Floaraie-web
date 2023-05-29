@@ -1,0 +1,29 @@
+
+   <section>
+    <p class="text-color" style="padding-left: 50px; font-size: 35px">Produse:</p>
+    <p class="text-color" style="padding-left: 50px; font-size: 20px">Aranjamenente cutie:</p>
+    <td item *ngFor="let product of productsFromDB"><p class="text-color" style="padding-left: 100px; font-size: 20px">{{product.Nume}} - {{product.Pret}} RON</p>
+    <img src="{{product.Imagine}}" alt="img1" height="300" width="300" class="img2">
+    <button mat-raised-button class="img-button1" (click)="addToCart(product)"  routerLink="/cart" > 
+  <span class="text-color">Adaugati in cos</span>
+</button>
+</td>
+</section>
+    <section>
+    <p class="text-color" style="padding-left: 50px; font-size: 20px">Aranjamente coș:</p>
+    <td item *ngFor="let product2 of products2FromDB"><p class="text-color" style="padding-left: 100px; font-size: 20px">{{product2.Nume}}-{{product2.Pret}}</p>
+      <img src="{{product2.Imagine}}" alt="img4" height="300" width="300" class="img2">
+    <button mat-raised-button style class="img-button1" (click)="addToCart2(product2)" routerLink="/cart">
+        <span class="text-color">Adaugati in cos</span>
+</button>
+</td>
+</section>
+  <section>
+    <p class="text-color" style="padding-left: 50px; font-size: 20px">Aranjamente vază:</p>
+    <td item *ngFor="let product3 of products3FromDB"><p class="text-color" style="padding-left: 100px; font-size: 20px">{{product3.Nume}}-{{product3.Pret}}</p>
+      <img src="{{product3.Imagine}}" alt="img7" height="300" width="300" class="img2">
+    <button mat-raised-button class="img-button1" (click)="addToCart3(product3)" routerLink="/cart">
+        <span class="text-color">Adaugati in cos</span>
+</button>
+</td>
+</section>

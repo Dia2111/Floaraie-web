@@ -1,0 +1,119 @@
+<section>
+  <mat-stepper orientation="vertical" class="text-color" [linear]="true" #stepper>
+    <mat-step>
+      <form>
+        <ng-template matStepLabel>Completați numele și prenumele</ng-template>
+        <mat-form-field>
+          <mat-label>Nume Prenume</mat-label>
+          <input matInput formControlName="Nume" placeholder="Ex. Popescu Ion" required>
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperNext>Următorul</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step>
+      <form>
+        <ng-template matStepLabel>Completați adresa de email</ng-template>
+        <mat-form-field>
+      <mat-label>Email</mat-label>
+      <input matInput formControlName="Email" placeholder="Ex. email@gmail.com" required>
+    </mat-form-field>
+    <div>
+      <button mat-button matStepperNext>Următorul</button>
+    </div>
+  </form>
+</mat-step>
+<mat-step>
+  <form>
+    <ng-template matStepLabel>Completați numărul de telefon</ng-template>
+    <mat-form-field>
+      <mat-label>Număr de telefon</mat-label>
+      <input matInput formControlName="Număr de telefon" placeholder="Ex. 0700000000" required>
+    </mat-form-field>
+    <div>
+      <button mat-button matStepperNext>Următorul</button>
+    </div>
+  </form>
+</mat-step>
+    <mat-step>
+      <form>
+        <ng-template matStepLabel>Completați adresa de livrare</ng-template>
+        <mat-form-field>
+          <mat-label>Adresă</mat-label>
+          <input matInput formControlName="Adresă" placeholder="Ex. Bvd Victoriei nr 2, Sibiu" required>
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperPrevious>Înapoi</button>
+          <button mat-button matStepperNext>Următorul</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step>
+      <form>
+        <ng-template matStepLabel> Când doriți să efectuăm livrarea? </ng-template>
+        <mat-form-field>
+          <mat-label>Dată livrare</mat-label>
+      <input matInput [matDatepicker]="picker" formControlName="dată" placeholder="ZZ/MM/YYYY" required>
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Oră livrare</mat-label>
+      <input matInput type="time" formControlName="ora" placeholder="HH:MM" required>
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperPrevious>Înapoi</button>
+          <button mat-button matStepperNext>Următorul</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step>
+      <form>
+        <ng-template matStepLabel>Completați detaliile de plată</ng-template>
+        <mat-form-field>
+          <mat-label>Număr card</mat-label>
+          <input matInput formControlName="Număr Card" placeholder="Ex. 0000 1111 2222 3333" required>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Data expirări</mat-label>
+          <input matInput [matDatepicker]="picker" formControlName="dată" placeholder="MM/YYYY" required >
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>CVC</mat-label>
+          <input matInput formControlName="cvv" placeholder="Ex. 123" required>
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperPrevious>Înapoi</button>
+          <button mat-button matStepperNext>Următorul</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>Verificați și plasați comanda</ng-template>
+      <h3 class="cart-total">Sumar comandă:</h3>
+      <ul class="cart-items">
+        <li *ngFor="let item of cart.items" class="cart-item">
+          <img src="{{ item.Imagine }}" alt="img" class="item-image">
+          <div class="item-details">
+            <h3 class="item-title">{{ item.title }}</h3>
+            <p class="item-text">Nume: {{ item.Nume }}</p>
+            <p class="item-text">Preț: {{ item.Pret | currency:' RON ' }}</p>
+            <p class="item-text">Cantitate: {{ item.Cantitate }}</p>
+          </div>
+        </li>
+      </ul>
+      <p class="cart-total">Total: {{ cart.total | currency:' RON ' }}</p>
+      <div>
+        <button mat-button matStepperPrevious>Înapoi</button>
+        <button mat-button matStepperNext>Plasați comanda</button>
+      </div>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>Finalizat</ng-template>
+      <p style="font-size: 25px;  font-family: 'Merriweather', serif; padding-top: 10px;">Comanda dumneavoastră a fost plasată cu succes! Vă mulțumim!</p>
+    </mat-step>
+  </mat-stepper>
+</section>

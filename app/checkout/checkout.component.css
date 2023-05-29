@@ -1,0 +1,181 @@
+::ng-deep .mat-step-header .mat-step-icon {
+  background-color: rgb(188, 6, 115);
+}
+
+.component-class {
+  position: relative;
+  left: 10px; 
+  top: 10px;
+  bottom: 10px;
+}
+
+.img-button1 {
+  position: relative;
+  align-items: center; 
+  left: 10px;
+  top: 10px;
+  bottom: 10px;
+} 
+
+.text-color {
+  font-family: 'Merriweather', serif;
+  padding-top: 30px;
+  padding-bottom: 10px;
+  font-size: 21px;
+}
+
+.mat-stepper-vertical {
+  margin-top: 8px;
+  margin-left: 20px;
+}
+
+.mat-mdc-form-field {
+  margin-top: 16px;
+  margin-left: 10px;
+}
+
+.item-text {
+  font-size: 14px;
+  margin-bottom: 5px;
+  font-family: 'Merriweather', serif;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.item-image {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.item-details {
+  flex-grow: 1;
+}
+
+.item-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-family: 'Merriweather', serif;
+}
+
+.item-text {
+  font-size: 14px;
+  margin-bottom: 5px;
+  font-family: 'Merriweather', serif;
+}
+
+.cart-total {
+  font-size: 14px;
+  margin-top: 20px;
+  font-weight: bold;
+  font-family: 'Merriweather', serif;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .component-class {
+    left: 5px; 
+    top: 5px;
+    bottom: 5px;
+  }
+
+  .img-button1 {
+    left: 5px;
+    top: 5px;
+    bottom: 5px;
+  }
+
+  .text-color {
+    font-size: 18px;
+    padding-top: 20px;
+    padding-bottom: 5px;
+  }
+
+  .mat-stepper-vertical {
+    margin-top: 4px;
+    margin-left: 10px;
+  }
+
+  .mat-mdc-form-field {
+    margin-top: 12px;
+    margin-left: 5px;
+  }
+
+  .item-image {
+    width: 150px;
+    height: 150px;
+    margin-right: 10px;
+  }
+
+  .item-title {
+    font-size: 16px;
+    margin-bottom: 3px;
+  }
+
+  .item-text {
+    font-size: 12px;
+    margin-bottom: 3px;
+  }
+
+  .cart-total {
+    font-size: 12px;
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .component-class {
+    left: 2px; 
+    top: 2px;
+    bottom: 2px;
+  }
+
+  .img-button1 {
+    left: 2px;
+    top: 2px;
+    bottom: 2px;
+  }
+
+  .text-color {
+    font-size: 16px;
+    padding-top: 15px;
+    padding-bottom: 3px;
+  }
+
+  .mat-stepper-vertical {
+    margin-top: 2px;
+    margin-left: 5px;
+  }
+
+  .mat-mdc-form-field {
+    margin-top: 8px;
+    margin-left: 2px;
+  }
+
+  .item-image {
+    width: 100px;
+    height: 100px;
+    margin-right: 5px;
+  }
+
+  .item-title {
+    font-size: 14px;
+    margin-bottom: 2px;
+  }
+
+  .item-text {
+    font-size: 10px;
+    margin-bottom: 2px;
+  }
+
+  .cart-total {
+    font-size: 10px;
+    margin-top: 10px;
+  }
+}

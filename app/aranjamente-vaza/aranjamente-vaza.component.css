@@ -1,0 +1,32 @@
+.img2 {
+  position: relative;
+  top: 20px;
+  right: 0px;
+  left: 450px;
+  bottom: 20px;
+  padding-bottom: 50px;
+  
+}
+
+
+.img-button1{
+  position: relative;
+  align-items: center; 
+  left: 65px;
+  top: 5px;
+  bottom: 25px;
+} 
+.img-button2{
+  position: relative;
+  align-items: center; 
+  left: 75px;
+  top: 5px;
+  bottom: 25px;
+} 
+
+.text-color {
+  color: rgb(188, 6, 115);
+  font-family: 'Merriweather', serif;
+  padding-top:30px;
+  padding-bottom: 10px;
+}

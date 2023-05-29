@@ -1,0 +1,33 @@
+<nav>
+  <section>
+     <div class="text-center">
+        <h1 class="title-color" style="font-size:88px">Florăria Ana</h1>
+      </div>
+    <img src="assets/images/logo_florarie.jpg" alt="Logo" height="250" width="250" class="img">
+    </section>
+    
+    
+     <section class="menu-button">
+        <button mat-icon-button [matMenuTriggerFor]="menu">
+            <mat-icon class="icon-button">more_vert</mat-icon>
+           </button>
+          <mat-menu #menu="matMenu" class="icon-button">
+            <button mat-menu-item routerLink="cart">
+              <mat-icon class="icon-button">shopping_cart</mat-icon>
+              <span>Cos cumparaturi</span>
+            </button>
+            <button mat-menu-item [matMenuTriggerFor]="submenu">
+                <mat-icon class="icon-button">favorite</mat-icon>
+                Categorii produse</button>
+            <mat-menu #submenu="matMenu" class="icon-button">
+            <button mat-menu-item routerLink="aranjamente_cos">Aranjamente cos</button>
+           <button mat-menu-item routerLink="aranjamente_cutie">Aranjamente cutie</button>
+           <button mat-menu-item routerLink="aranjamente_vaza">Aranjamente vaza</button>
+           </mat-menu>
+            <button mat-menu-item routerLink="">
+              <mat-icon class="icon-button">home</mat-icon>
+              <span>Home Page</span>
+            </button>
+          </mat-menu>
+      </section>
+</nav>
